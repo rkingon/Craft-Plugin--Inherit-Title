@@ -1,0 +1,14 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: 'Populate With'|t,
+    required: true,
+    name: 'populateWith',
+    value: settings.populateWith ? settings.populateWith : null
+}) }}
+
+{{ forms.checkboxField({
+    label: 'Populate Slug'|t,
+    name: 'populateSlug',
+    checked: settings.populateSlug ? settings.populateSlug : false
+}) }}
