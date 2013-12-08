@@ -4,7 +4,8 @@
     label: 'Populate With'|t,
     required: true,
     name: 'populateWith',
-    value: settings.populateWith ? settings.populateWith : null
+    value: settings.populateWith ? settings.populateWith : null,
+	instructions: "Example: {{firstName}} {{lastName}}"
 }) }}
 
 {{ forms.checkboxField({
