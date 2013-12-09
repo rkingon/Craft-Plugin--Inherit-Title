@@ -5,11 +5,3 @@
 	name: "inherittitle",
     value: ""
 }) }}
-
-{% set settings %}
-	var inheritTitleSettings = {{ settingsJSON | raw }};
-{% endset %}
-
-{% includeJs settings %}
-{% includeJsResource "inherittitle/javascripts/handlebars.js" %}
-{% includeJsResource "inherittitle/javascripts/inheritTitle.js" %}
