@@ -26,9 +26,10 @@ class InheritTitleFieldType extends BaseFieldType
 
 	public function getInputHtml($name, $value)
 	{
+		$settings = $this->getSettings();
 		craft()->templates->includeJsResource('inherittitle/javascripts/handlebars.js');
 		craft()->templates->includeJsResource('inherittitle/javascripts/inheritTitle.js');
-		craft()->templates->includeJs('new ft_inheritTitle('.JsonHelper::encode($this->getSettings()["attributes"]).');');
+		craft()->templates->includeJs('new ft_inheritTitle('.JsonHelper::encode($settings["attributes"]).');');
 		return craft()->templates->render('inherittitle/_fieldtype/index', array(
 			'settingsJSON' => json_encode($this->getSettings()["attributes"])
 		));
