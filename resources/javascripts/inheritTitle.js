@@ -1,4 +1,4 @@
-(function($) {
+(function($, Craft) {
 	
 	window.ft_inheritTitle = function(settings) {
 	
@@ -55,4 +55,4 @@
 	
 	};
 	
-})(jQuery);
+})(jQuery, Craft);
