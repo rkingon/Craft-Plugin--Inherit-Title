@@ -8,7 +8,7 @@
 	
 		this.init = function() {
 			// Hide our field / the title
-			$("#fields-inheritTitle-field,#title-field").hide();
+			$("#fields-"+app.settings.pluginName+"-field,#title-field").hide();
 			// Hook into form submit
 			$("#entry-form").on("submit.inheritTitle", app.onSubmit);
 		};
